@@ -29,5 +29,3 @@ plt.title('cantidad de personas por ciudad')
 plt.xlabel('ciudades')
 plt.ylabel('cantidad de peronas')
 plt.show()
-
-
