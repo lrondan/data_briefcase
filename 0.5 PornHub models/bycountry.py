@@ -1,5 +1,5 @@
 import pandas as pd
-import csv
+import matplotlib.pyplot as plt
 
 archivo = '0.5 PornHub models/Models by country.csv'
 with open(archivo,'r')as file:
@@ -7,5 +7,4 @@ with open(archivo,'r')as file:
     df = pd.DataFrame(data=datas)
 
 countries = df['Countries'].value_counts()
-
-print(countries)
+countries.to_csv('0.5 PornHub models/newarch.csv')
