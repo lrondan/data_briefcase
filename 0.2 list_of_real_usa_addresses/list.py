@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-with open('list_of_real_usa_addresses/list_of_real_usa_addresses.json', 'r')as file:
+with open('./list_of_real_usa_addresses.json', 'r')as file:
     listas = pd.read_json(file)
     address = listas['address']
     city = listas['city']
