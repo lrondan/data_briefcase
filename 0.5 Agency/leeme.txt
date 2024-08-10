@@ -1,0 +1,17 @@
+https://api.kingsjourney.online
+
+
+payment [name='index']
+success [name='success_payment']
+canel [name='cancel_payment']
+download_reservak/<str:id>/
+download_prereservak/<str:id>/
+download_hostal/<str:id>/
+download_hostal_booking/<str:id>/
+admin/
+graphql
+verify/<str:code>/
+verify_seller/
+^media/(?P<path>.*)$
+
+You’re seeing this error because you have DEBUG = True in your Django settings file. Change that to False, and Django will display a standard 404 page.
