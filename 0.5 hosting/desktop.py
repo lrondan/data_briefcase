@@ -18,11 +18,20 @@ class Ventana:
         self.app.geometry('540x210')
         self.app.title('Hosting')
         self.app.resizable(0,0)
-        self.app.config(bg='gray')
         self.Labels()
         self.Entradas()
         self.Botones()
         self.SetPrecios()
+        self.Menus()
+
+    def Menus(self):
+        self.barramenu = Menu(self.app)
+        self.app.config(menu=self.barramenu)
+
+        self.opc1 = Menu(self.barramenu, tearoff=0)
+        self.opc1.add_command(label='Vistas', command=self.Vistas)
+
+        self.barramenu.add_cascade(label='Ayuda', menu=self.opc1)
 
     def Labels(self):
         Label(text='Valores en USD', justify=CENTER, font='BOLD',width=12).grid(row=0, column=0)
@@ -113,6 +122,10 @@ class Ventana:
 
     def Dashb(self):
         from datas import dash2d
+
+    def Vistas(self):
+        view = '0.5 hosting\web\index.html'
+        webbrowser.open(view)
 
     def Salir(self):
         self.app.quit()
